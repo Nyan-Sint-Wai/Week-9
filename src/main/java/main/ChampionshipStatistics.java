@@ -2,11 +2,13 @@ package main;
 
 import java.util.*;
 
+// ChampionshipStatistics class
 class ChampionshipStatistics {
     public static double calculateAveragePointsPerDriver(List<Driver> drivers) {
         return drivers.isEmpty() ? 0 : drivers.stream().mapToInt(Driver::getPoints).average().orElse(0);
     }
-
+    
+    // Method to find the most successful country based on total points of its drivers
     public static String findMostSuccessfulCountry(List<Driver> drivers) {
         Map<String, Integer> countryPoints = new HashMap<>();
         for (Driver driver : drivers) {

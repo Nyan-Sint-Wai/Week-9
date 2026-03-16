@@ -2,12 +2,14 @@ package main;
 
 import java.util.*;
 
+// RaceResult interface to define methods for recording and retrieving
 interface RaceResult {
     void recordResult(Driver driver, int position, int points);
     int getDriverPoints(Driver driver);
     List<Map.Entry<Driver, Integer>> getResults();
 }
 
+// RallyRaceResult class to represent the results of a rally
 class RallyRaceResult implements RaceResult {
     private String raceName;
     private String location;
@@ -19,6 +21,7 @@ class RallyRaceResult implements RaceResult {
         this.results = new LinkedHashMap<>();
     }
 
+    // Getters
     public String getRaceName() { 
         return raceName;
     }
