@@ -2,6 +2,7 @@ package main;
 
 import java.util.Map;
 
+// Main class to run the Rally Championship application
 public class RallyChampionship {
     public static void main(String[] args) {
         ChampionshipManager manager = ChampionshipManager.getInstance();
